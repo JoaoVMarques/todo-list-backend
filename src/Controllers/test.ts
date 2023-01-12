@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from 'express'
+import { Request, Response, NextFunction } from 'express';
 
-class test {
+class Test {
   private req: Request;
   private res: Response;
   private next: NextFunction;
@@ -12,8 +12,9 @@ class test {
   }
 
   public async create() {
-    return this.res.status(200).json({ mensagem: "Olá mundo" })
+    console.log(this.req);
+    return this.res.status(200).json({ mensagem: 'Olá mundo' });
   }
 }
 
-export default test
+export default Test;

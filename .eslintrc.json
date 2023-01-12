@@ -1,0 +1,6 @@
+{
+  "extends": "trybe-backend-typescript",
+  "rules": {
+    "lines-between-class-members": "off"
+  }
+}
