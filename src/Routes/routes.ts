@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import Test from '../Controllers/test';
+import AccountController from '../Controllers/accountController';
 
 const routes = Router();
 
-routes.get(
-  '/test',
-  (req, res, next) => new Test(req, res, next).create(),
+routes.post(
+  '/register',
+  (req, res, next) => new AccountController(req, res, next).register(),
 );
 
 export default routes;
