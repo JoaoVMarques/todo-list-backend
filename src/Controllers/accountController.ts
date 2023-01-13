@@ -22,8 +22,8 @@ class AccountController {
     };
 
     try {
-      const newAccount = await this.service.register(userAccount);
-      return this.res.status(201).json({ newAccount });
+      const message = await this.service.register(userAccount);
+      return this.res.status(201).json(message);
     } catch (error) {
       console.log(error);
     }

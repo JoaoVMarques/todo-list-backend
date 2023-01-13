@@ -10,6 +10,7 @@ class AccountODM extends AbstractODM<IAccount> {
       password: { type: String, required: true },
     }, {
       versionKey: '_version',
+      timestamps: true,
     });
     super(schema, 'account');
   }
