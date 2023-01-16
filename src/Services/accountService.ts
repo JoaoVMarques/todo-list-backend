@@ -5,8 +5,8 @@ class AccountService {
   private accountODM = new AccountODM()
 
   public async register(account: IAccount) {
-    const newPayment = await this.accountODM.create(account);
-    const { username, _id, createdAt } = newPayment;
+    const newAccount = await this.accountODM.create(account);
+    const { username, _id, createdAt } = newAccount;
     if (_id) {
       return { message: 'Conta criada com sucesso', username, id: _id, createdAt };
     }
