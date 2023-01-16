@@ -34,4 +34,31 @@ describe('Deve registrar uma conta com sucesso', () => {
 
     sinon.restore();
   });
+
+  it('Deve retornar um erro caso algo ocorra no banco de dados', async () => {
+    const RESULT_ERROR = 'não foi possivel criar sua conta'
+    const accoutInput = {
+      username: 'test',
+      email: 'test@test.com',
+      password: 'test1234',
+    };
+
+    const accoutOutput = {
+      message: 'Conta criada com sucesso',
+      username: 'pedro',
+      createdAt: '2023-01-16T22:46:37.648Z',
+    };
+
+    sinon.stub(Model, 'create').resolves(accoutOutput);
+
+    const service = new AccountService();
+    try {
+      await service.register(accoutInput);
+    } catch (error) {
+      expect((error as Error).message).to.be.equal(RESULT_ERROR);
+    }
+
+
+    sinon.restore();
+  })
 });
