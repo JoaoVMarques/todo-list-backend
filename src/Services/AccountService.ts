@@ -1,7 +1,7 @@
-import Account from '../Domains/account';
+import Account from '../Domains/Account';
 import IAccount from '../Interfaces/IAccount';
 import INewAccount from '../Interfaces/INewAccount';
-import AccountODM from '../Models/accountODM';
+import AccountODM from '../Models/AccountODM';
 
 class AccountService {
   private accountODM = new AccountODM()
