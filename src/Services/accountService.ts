@@ -1,14 +1,17 @@
+import Account from '../Domains/account';
 import IAccount from '../Interfaces/account';
+import INewAccount from '../Interfaces/newAccount';
 import AccountODM from '../Models/accountODM';
 
 class AccountService {
   private accountODM = new AccountODM()
 
   public async register(account: IAccount) {
-    const newAccount = await this.accountODM.create(account);
-    const { username, _id, createdAt } = newAccount;
+    const newAccount: INewAccount = await this.accountODM.create(account);
+    const { _id } = newAccount;
     if (_id) {
-      return { message: 'Conta criada com sucesso', username, id: _id, createdAt };
+      const createdAccount = new Account(newAccount);
+      return { message: 'Conta criada com sucesso', account: createdAccount };
     }
     throw Error('não foi possivel criar sua conta');
   }

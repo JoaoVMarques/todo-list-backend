@@ -1,6 +1,7 @@
 {
   "extends": "trybe-backend-typescript",
   "rules": {
-    "lines-between-class-members": "off"
+    "lines-between-class-members": "off",
+    "no-underscore-dangle": "off"
   }
 }
