@@ -1,3 +1,5 @@
+export const JWT_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9'
+
 export const accoutInput = {
   username: 'test',
   email: 'test@test.com',
@@ -18,7 +20,8 @@ export const accountRestul = {
     email: 'test@test.com',
     id: '63c5d3cda66bf339cc0cd2bb',
     createdAt: '2023-01-16T22:46:37.648Z',
-  }
+  },
+  token: JWT_TOKEN,
 }
 
 export const accoutOutputError = {

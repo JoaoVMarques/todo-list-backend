@@ -6,8 +6,11 @@ import {
   accountRestul,
   accoutInput,
   accoutOutput,
-  accoutOutputError
+  accoutOutputError,
+  JWT_TOKEN
 } from './mocks/AccountMock';
+import 'dotenv/config';
+import jwt from 'jsonwebtoken';;
 
 afterEach(() => {
   sinon.restore();
@@ -16,12 +19,14 @@ afterEach(() => {
 describe('Deve registrar uma conta com sucesso', () => {
   it('A conta precisa ser registrada com sucesso', async () => {
     sinon.stub(Model, 'create').resolves(accoutOutput);
+    sinon.stub(jwt, 'sign').callsFake(() => {
+      return JWT_TOKEN
+    });
 
     const service = new AccountService();
     const result = await service.register(accoutInput);
 
     expect(result).to.be.deep.equal(accountRestul);
-
   });
 
   it('Deve retornar um erro caso algo ocorra no banco de dados', async () => {
