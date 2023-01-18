@@ -4,7 +4,7 @@ class Account {
   private username;
   private email;
   private createdAt;
-  private id;
+  public id;
 
   constructor(account: INewAccount) {
     this.username = account.username;
