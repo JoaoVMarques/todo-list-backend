@@ -2,28 +2,15 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import { Model } from 'mongoose';
 import AccountService from '../../src/Services/AccountService';
+import { 
+  accountRestul,
+  accoutInput,
+  accoutOutput,
+  accoutOutputError
+} from './mocks/AccountMock';
 
 describe('Deve registrar uma conta com sucesso', () => {
   it('A conta precisa ser registrada com sucesso', async () => {
-    const accoutInput = {
-      username: 'test',
-      email: 'test@test.com',
-      password: 'test1234',
-    };
-
-    const accoutOutput = {
-      message: 'Conta criada com sucesso',
-      username: 'pedro',
-      _id: '63c5d3cda66bf339cc0cd2bb',
-      createdAt: '2023-01-16T22:46:37.648Z',
-    };
-
-    const accountRestul = {
-      message: 'Conta criada com sucesso',
-      username: 'pedro',
-      id: '63c5d3cda66bf339cc0cd2bb',
-      createdAt: '2023-01-16T22:46:37.648Z',
-    }
 
     sinon.stub(Model, 'create').resolves(accoutOutput);
 
@@ -37,19 +24,8 @@ describe('Deve registrar uma conta com sucesso', () => {
 
   it('Deve retornar um erro caso algo ocorra no banco de dados', async () => {
     const RESULT_ERROR = 'não foi possivel criar sua conta'
-    const accoutInput = {
-      username: 'test',
-      email: 'test@test.com',
-      password: 'test1234',
-    };
-
-    const accoutOutput = {
-      message: 'Conta criada com sucesso',
-      username: 'pedro',
-      createdAt: '2023-01-16T22:46:37.648Z',
-    };
-
-    sinon.stub(Model, 'create').resolves(accoutOutput);
+    
+    sinon.stub(Model, 'create').resolves(accoutOutputError);
 
     const service = new AccountService();
     try {
