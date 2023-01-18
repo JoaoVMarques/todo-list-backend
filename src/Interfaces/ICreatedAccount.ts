@@ -1,5 +1,5 @@
 import { Types } from 'mongoose';
-import IAccount from './account';
+import IAccount from './IAccount';
 
 interface ICreatedAccount extends Omit<IAccount, 'password'> {
   createdAt: Date,

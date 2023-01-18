@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import IAccount from '../Interfaces/account';
-import AccountService from '../Services/accountService';
+import IAccount from '../Interfaces/IAccount';
+import AccountService from '../Services/AccountService';
 
 class AccountController {
   private req: Request;

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { Model } from 'mongoose';
-import AccountService from '../../src/Services/accountService';
+import AccountService from '../../src/Services/AccountService';
 
 describe('Deve registrar uma conta com sucesso', () => {
   it('A conta precisa ser registrada com sucesso', async () => {

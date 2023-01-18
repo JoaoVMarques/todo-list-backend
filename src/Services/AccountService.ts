@@ -1,6 +1,6 @@
 import Account from '../Domains/account';
-import IAccount from '../Interfaces/account';
-import INewAccount from '../Interfaces/newAccount';
+import IAccount from '../Interfaces/IAccount';
+import INewAccount from '../Interfaces/INewAccount';
 import AccountODM from '../Models/accountODM';
 
 class AccountService {
