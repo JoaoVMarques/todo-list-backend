@@ -34,7 +34,6 @@ describe('Deve registrar uma conta com sucesso', () => {
       expect((error as Error).message).to.be.equal(RESULT_ERROR);
     }
 
-
     sinon.restore();
   })
 });
