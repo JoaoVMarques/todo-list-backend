@@ -20,7 +20,7 @@ describe('Deve registrar uma conta com sucesso', () => {
   it('A conta precisa ser registrada com sucesso', async () => {
     sinon.stub(Model, 'create').resolves(accoutOutput);
     sinon.stub(jwt, 'sign').callsFake(() => {
-      return JWT_TOKEN
+      return JWT_TOKEN 
     });
 
     const service = new AccountService();
