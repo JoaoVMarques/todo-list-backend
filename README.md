@@ -4,7 +4,7 @@
 É uma API para um futuro projeto front-end que irei desenvolver
 
 ## Porque?
-Para melhorar minhas habilidades full-stack e ter algo para por no portifólio
+Melhorar minhas habilidades full-stack e ter algo para por no portifólio
 
 ## 🚀 Instalação do projeto
 <details>
