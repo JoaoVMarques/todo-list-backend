@@ -1,14 +1,14 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { Model } from 'mongoose';
-import AccountService from '../../src/Services/AccountService';
+import AccountService from '../../src/Services/accountService';
 import { 
   accountRestul,
   accoutInput,
   accoutOutput,
   accoutOutputError,
   JWT_TOKEN
-} from './mocks/AccountMock';
+} from './mocks/accountMock';
 import 'dotenv/config';
 import jwt from 'jsonwebtoken';;
 

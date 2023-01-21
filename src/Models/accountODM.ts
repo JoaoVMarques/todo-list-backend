@@ -1,6 +1,6 @@
 import { Schema } from 'mongoose';
 import IAccount from '../Interfaces/IAccount';
-import AbstractODM from './AbstractsODM';
+import AbstractODM from './abstractsODM';
 
 class AccountODM extends AbstractODM<IAccount> {
   constructor() {

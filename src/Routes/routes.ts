@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response, Router } from 'express';
-import AccountController from '../Controllers/AccountController';
+import AccountController from '../Controllers/accountController';
 import registerSchema from '../express/registerSchema';
-import { registerMiddleware } from '../Middlewares/registerMiddleware';
+import { registerMiddleware } from '../express/middlewares/registerMiddleware';
 
 const routes = Router();
 
