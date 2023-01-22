@@ -9,8 +9,8 @@ routes.post(
   '/account',
   registerSchema,
   (req: Request, res: Response, next: NextFunction) => registerMiddleware(req, res, next), 
-  (req: Request, res: Response, next: NextFunction) => new
-   AccountController(req, res, next).register(),
+  (req: Request, res: Response, next: NextFunction) => new AccountController(req, res, next)
+    .register(),
 );
 
 export default routes;

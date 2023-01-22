@@ -1,4 +1,4 @@
-import Account from '../../Domains/account';
+import Account from '../account';
 import IAccountMessage from '../../Interfaces/IAccountMessage';
 
 class AccountMessage {

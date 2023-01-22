@@ -1,4 +1,4 @@
-import Account from '../Domains/account';
+import Account from '../domains/account';
 
 interface IAccountMessage {
   message: string;

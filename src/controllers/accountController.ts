@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import IAccount from '../Interfaces/IAccount';
-import AccountService from '../Services/accountService';
+import AccountService from '../services/accountService';
 
 class AccountController {
   private req: Request;
@@ -16,14 +16,11 @@ class AccountController {
   }
 
   public async register() {
-    const { username, email, password } = this.req.body;
-    const userAccount: IAccount = {
-      username, email, password,
-    };
+    const userAccount: IAccount = this.req.body;
 
     try {
       const message = await this.service.register(userAccount);
-      return this.res.status(201).json(message);
+      return this.res.status(201).json({ response: message });
     } catch (error) {
       this.next(error);
     }

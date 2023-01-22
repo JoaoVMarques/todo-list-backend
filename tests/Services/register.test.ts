@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 import { Model } from 'mongoose';
-import AccountService from '../../src/Services/accountService';
+import AccountService from '../../src/services/accountService';
 import { 
   accountRestul,
   accoutInput,

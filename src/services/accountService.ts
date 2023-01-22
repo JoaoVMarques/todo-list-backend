@@ -1,10 +1,10 @@
-import Account from '../Domains/account';
+import Account from '../domains/account';
 import IAccount from '../Interfaces/IAccount';
 import INewAccount from '../Interfaces/INewAccount';
 import AccountODM from '../models/accountODM';
 import Jwt from '../utils/jwt';
 import PasswordCrypt from '../utils/password';
-import AccountMessage from './messages/accountMessage';
+import AccountMessage from '../domains/services/accountMessage';
 
 class AccountService {
   private accountODM = new AccountODM()
