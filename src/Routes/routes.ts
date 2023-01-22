@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response, Router } from 'express';
-import AccountController from '../Controllers/accountController';
+import AccountController from '../controllers/accountController';
 import registerSchema from '../express/registerSchema';
 import { registerMiddleware } from '../express/middlewares/registerMiddleware';
 
