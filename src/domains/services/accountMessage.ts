@@ -1,5 +1,5 @@
 import Account from '../account';
-import IAccountMessage from '../../Interfaces/IAccountMessage';
+import IAccountMessage from '../../interfaces/IAccountMessage';
 
 class AccountMessage {
   private message: string;

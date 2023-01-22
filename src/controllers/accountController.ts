@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import IAccount from '../Interfaces/IAccount';
+import IAccount from '../interfaces/IAccount';
 import AccountService from '../services/accountService';
 
 class AccountController {

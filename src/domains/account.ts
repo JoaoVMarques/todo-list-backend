@@ -1,4 +1,4 @@
-import INewAccount from '../Interfaces/INewAccount';
+import INewAccount from '../interfaces/INewAccount';
 
 class Account {
   private username;
