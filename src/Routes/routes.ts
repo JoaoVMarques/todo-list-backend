@@ -6,7 +6,7 @@ import { registerMiddleware } from '../express/middlewares/registerMiddleware';
 const routes = Router();
 
 routes.post(
-  '/register',
+  '/account',
   registerSchema,
   (req: Request, res: Response, next: NextFunction) => registerMiddleware(req, res, next), 
   (req: Request, res: Response, next: NextFunction) => new
