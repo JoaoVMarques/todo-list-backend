@@ -14,6 +14,10 @@ class AccountODM extends AbstractODM<IAccount> {
     });
     super(schema, 'account');
   }
+
+  public async findOne(email: string) {
+    return this.model.findOne({ where: email });
+  }
 }
 
 export default AccountODM;
