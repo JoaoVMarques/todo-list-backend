@@ -1,8 +1,9 @@
 import express from 'express';
-import ErrorHandler from './Middlewares/errorhandler';
+import routers from './routes';
 
 const app = express();
+
+app.use(routers);
 app.use(express.json());
-app.use(ErrorHandler.handle);
 
 export default app;
