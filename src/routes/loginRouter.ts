@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import Account from '../controllers/account';
+import AccountController from '../controllers/accountController';
 
 const loginRouter = Router();
 
-loginRouter.post('/', (req, res, next) => new Account(req, res, next).register());
+loginRouter.post('/', (req, res, next) => new AccountController(req, res, next).register());
 
 export default loginRouter;

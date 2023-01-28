@@ -3,7 +3,7 @@ import routers from './routes';
 
 const app = express();
 
-app.use(routers);
 app.use(express.json());
+app.use(routers);
 
 export default app;
